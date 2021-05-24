@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="knockout_basics.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript' src='./bower_components/knockout/dist/knockout.js'></script>
+    <script type="text/javascript" src="knockout_array.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="card" id="knockout-app">
+        <header>
+            Good Dog Walks Inc.
+        </header>
+
+        <div class="card-section">
+            <h2>Toy Inventory</h2>
+            <p data-bind="visible: inventory().length > 0">These are the assets we have to work with.</p>
+            <p data-bind="visible: inventory().length === 0">You don't have any toys yet!</p>
+
+            <button data-bind="click: addItem, enable: inventory().length < 4">+ Add Toy</button>
+        </div>
+
+        <ul class="counter-ui-container" data-bind="foreach: inventory">
+            <li>
+                <span data-bind="class: $data.icon"></span>
+                <span data-bind="text: $data.text"></span>
+                <span>
+                    <button data-bind="click: $parent.removeItem, attr: { 'item-index': $index }">&times;</button>
+                </span>
+            </li>
+        </ul>
+
+        <footer>
+            <span>Have a tail wagging day!</span>
+        </footer>
+    </div>
+</body>
+</html>

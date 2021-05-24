@@ -51,9 +51,14 @@ h2, p {
     }
 
 .counter-ui-container {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
+    list-style: none;
+}
+
+li span {
+    width: 33%;
 }
 
 .counter {
@@ -65,11 +70,12 @@ h2, p {
 
 button {
     cursor: pointer;
-    appearance: none;
     background: transparent;
     border: 1px solid var(--paragraph-color);
-    height: 40px;
-    width: 40px;
+    height: auto;
+    width: auto;
+    margin-top: 1em;
+    padding: 1rem;
     border-radius: var(--border-radius);
 }
 
@@ -86,3 +92,30 @@ footer {
     footer span {
         font-size: 0.8em;
     }
+
+.icon-bone,
+.icon-ball,
+.icon-circle,
+.icon-rabbit {
+    width: 64px;
+    height: 64px;
+    image-rendering: pixelated;
+    display: inline-block;
+    background: url("https://assets.codepen.io/21542/Toys.png") no-repeat no-repeat;
+    background-size: 256px;
+    vertical-align: middle;
+    position: relative;
+    top: -8px;
+}
+
+.icon-ball {
+    background-position: -64px;
+}
+
+.icon-circle {
+    background-position: -128px;
+}
+
+.icon-rabbit {
+    background-position: -192px;
+}
