@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link type="text/css" rel="stylesheet" href="knockout_basics.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript' src='./bower_components/knockout/dist/knockout.js'></script>
+    <script type="text/javascript" src="knockout_validForm.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="card" id="knockout-app">
+        <header>
+            Good Dog Walks Inc.
+        </header>
+
+        <div class="card-section">
+            <h2>Create Account</h2>
+            <p>Enter your name and details to get that tail wagging</p>
+           
+            <form method="post">
+                <div class="field">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="first-name" />
+                </div>
+             
+                <div class="field">
+                    <label for="email">email Address*</label>
+                    <input type="text" placeholder="you@mail.com" id="email" />
+                </div>
+
+                <div class="field">
+                    <label for="subscription">Subscription*</label>
+                    <select name="subscription" id="subscription">
+                        <option value="Standard">Volvo</option>
+                        <option value="VIP">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+              
+
+                <input type="submit" value="Continue" />
+            </form>
+
+        <footer>
+            <span>Have a tail wagging day!</span>
+        </footer>
+    </div>
+</body>
+</html>
