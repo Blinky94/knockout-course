@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="knockout_basics.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type='text/javascript' src='./bower_components/knockout/dist/knockout.js'></script>
+    <script type="text/javascript" src="knockout_basics.js"></script>
+    <title></title>
+</head>
+<body>
+    <div id="knockout-app" class="card">
+        <header>
+            Good Dog Walks Inc.
+        </header>
+
+        <div class="card-section">
+            <h2>Hello, <span data-bind="text: firstName"></span></h2>
+            <p>How many walks will we take today?</p>
+
+            <div class="counter-ui-container">
+                <button data-bind="click: decrease">-</button>
+                <span class="counter" data-bind="text: count"></span>
+                <button data-bind="click: increase">+</button>
+            </div>
+
+            <p>Your dog is <span data-bind="text: dogStatus"></span>!</p>
+        </div>
+        <footer>
+            <span>Have a tail wagging day!</span>
+        </footer>
+    </div>
+</body>
+</html>
