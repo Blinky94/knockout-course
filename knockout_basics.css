@@ -200,3 +200,7 @@ select {
 ::placeholder {
     color: #bbb;
 }
+
+span.validationMessage {
+    color: red;
+}
